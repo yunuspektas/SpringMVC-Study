@@ -22,7 +22,7 @@ public class BeanController {
     private ApplicationContext applicationContext;
     
     @RequestMapping("/bean")
-    @ResponseBody
+    @ResponseBody   // Controller sınıflarında konulması gerekiyor, " response da dönecek body i ben gireceğim " demektir.
     public Map<String,String> getBeans(){
         
         String[] beanNames = applicationContext.getBeanDefinitionNames();
